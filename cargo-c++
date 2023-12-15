@@ -1,0 +1,29 @@
+
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+RUST_LOG=debug cargo build
+
+[source.crates-io]
+replace-with = 'rsproxy-sparse'
+[source.rsproxy]
+registry = "https://rsproxy.cn/crates.io-index"
+[source.rsproxy-sparse]
+registry = "sparse+https://rsproxy.cn/index/"
+[registries.rsproxy]
+index = "https://rsproxy.cn/crates.io-index"
+[net]
+git-fetch-with-cli = true
+
+
+protobuf.git
+
+c++  sudo yum install centos-release-scl
+sudo yum install devtoolset-11
+scl enable devtoolset-11 bash
+
+yum install gcc gcc-c++ make libuuid-devel uuid-devel userspace-rcu-de bzip2 libicu-devel unzip openssl-devel libcurl-devel git clang libunwind-devel libxml2-devel python-devel libedit-devel libstdc++-static wget swig cmake
+
+
+cmake
+
+cargo build --profile production --bin subspace-node
